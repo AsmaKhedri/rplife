@@ -15,6 +15,22 @@ class Pattern:
     alive_cells: set[tuple[int, int]]
     # the tuple represents the coordinate of an alive cell in the life grid.
     
+    @classmethod
+    def from_toml(cls, name, toml_data):
+        return cls(
+            name,
+            alive_cells={tuple(cell) for cell in toml_data["alive_cells"]},
+        )
+
+
+
+
+
+
+
+
+
+
 
 
 #what I've learned:
